@@ -70,12 +70,12 @@
 #pragma mark -
 #pragma mark SearchHUD
 
-- (void)didSelectRowAtIndex:(NSUInteger)index {
+- (void)searchHUD:(PDSearchHUD *)searchHUD didSelectRowAtIndex:(NSUInteger)index {
     NSLog(@"Index of Tapped item : %lu", (unsigned long) index);
     _countryLabel.text = (self.items)[index];
 }
 
-- (void)didSelectItem:(NSString *)item {
+- (void)searchHUD:(PDSearchHUD *)searchHUD didSelectItem:(NSString *)item {
     NSLog(@"Selected Item %@", item);
     _countryLabel.text = item;
 }

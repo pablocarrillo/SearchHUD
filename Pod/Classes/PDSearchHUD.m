@@ -46,7 +46,6 @@
         _delegate = aDelegate;
         _searchList = list;
         _revisedList = list;
-        _searchType = PDSearchTypeContains;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
         _dismissWhenRowSelected = YES;
     }
@@ -153,15 +152,15 @@
 
     NSString *selectedItem = (self.revisedList)[(NSUInteger) indexPath.row];
 
-    if ([self.delegate respondsToSelector:@selector(didSelectRowAtIndex:)]) {
+    if ([self.delegate respondsToSelector:@selector(searchHUD:didSelectRowAtIndex:)]) {
         NSUInteger index = [self.searchList indexOfObject:selectedItem];
-        [self.delegate didSelectRowAtIndex:(NSUInteger) index];
+        [self.delegate searchHUD:self didSelectRowAtIndex:(NSUInteger) index];
     } else {
         NSLog(@"Sorry didSelectRowAtIndex: not implemented");
     }
 
-    if ([self.delegate respondsToSelector:@selector(didSelectItem:)]) {
-        [self.delegate didSelectItem:selectedItem];
+    if ([self.delegate respondsToSelector:@selector(searchHUD:didSelectItem:)]) {
+        [self.delegate searchHUD:self didSelectItem:selectedItem];
     } else {
         NSLog(@"Sorry didSelectItem: not implemented");
     }

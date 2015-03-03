@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class PDSearchHUD;
+
 typedef enum {
     PDSearchTypeBeginsWith,
     PDSearchTypeContains
@@ -22,14 +24,14 @@ typedef enum {
 * @brief Called after User taps on the List and index of the item is returned
 * @param index the index of the cell taped
 */
-- (void)didSelectRowAtIndex:(NSUInteger)index;
+- (void)searchHUD:(PDSearchHUD *)searchHUD didSelectRowAtIndex:(NSUInteger)index;
 
 /**
 * @brief Called after User taps on the List and value is returned
 * @param item the string of the cell tapped
 */
 
-- (void)didSelectItem:(NSString *)item;
+- (void)searchHUD:(PDSearchHUD *)searchHUD didSelectItem:(NSString *)item;
 @end
 
 @interface PDSearchHUD : UIView <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>

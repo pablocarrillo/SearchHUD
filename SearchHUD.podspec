@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SearchHUD"
-  s.version          = "0.3.1"
+  s.version          = "0.4.1"
   s.summary          = "SearchHUD is a control used to show a HUD which contains UISearchBar and UITableView."
   s.description      = <<-DESC
   						SearchHUD
