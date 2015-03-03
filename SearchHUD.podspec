@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SearchHUD"
-  s.version          = "0.2.1"
+  s.version          = "0.3.1"
   s.summary          = "SearchHUD is a control used to show a HUD which contains UISearchBar and UITableView."
   s.description      = <<-DESC
   						SearchHUD
@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency "Masonry", "~> 0.5.3"
+  s.dependency "Masonry", "~> 0.6"
 end
